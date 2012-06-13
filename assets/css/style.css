@@ -1,0 +1,108 @@
+body {
+  padding-top: 90px;
+}
+
+.masthead {
+  margin-bottom: 50px;
+}
+.masthead h1,
+.masthead p {
+  text-align: center;
+}
+.masthead h1 {
+  font-size: 81px;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+.masthead p {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 18px;
+}
+.masthead .btn-large {
+  font-size: 20px;
+  padding: 14px 24px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+.masthead .hello {
+  color: #999;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.masthead .buttons {
+  margin-top: 30px;
+}
+
+
+.quick-links {
+  list-style: none;
+  text-align: center;
+}
+
+
+.also {
+  margin-bottom: 50px;
+  background-color: #666;
+  padding: 30px 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.also h2 {
+  font-weight: normal;
+}
+
+
+
+.repos {
+  margin-bottom: 50px;
+  display: none;
+}
+.repos h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.repos>p {
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+
+.repo a {
+  display: block;
+  color: inherit;
+}
+.repo a:hover {
+  text-decoration: none;
+}
+.repo a:hover .inner {
+  background-color: #8df;
+  -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+.repo a:hover .repo-badges {
+/*  display: block;*/
+}
+.repo .inner {
+  height: 60px;
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+}
+.repo .repo-badges {
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  display: none;
+}
+.repo .repo-badges .badge {
+  margin-right: 10px;
+}
