@@ -19,21 +19,26 @@
         var userUrl = "https://api.github.com/users/marcuswhybrow?callback=?"
         var reposUrl = "https://api.github.com/users/marcuswhybrow/repos?callback=?"
         
-        function getWatcherText(num) {
-          if (num == 1) return num + " watcher";
-          return num + " watchers";
+        function getUrl(repo) {
+          if (repo.homepage && repo.homepage.indexOf("http://marcuswhybrow.github.com") == 0) return repo.homepage;
+          return repo.html_url;
+        }
+        
+        function getWatchers(repo) {
+          if (repo.watchers == 1) return repo.watchers + " watcher";
+          return repo.watchers + " watchers";
         }
         
         function addRepos(element, repos) {
           $.each(repos, function(i, repo) {
             var $item = $("<div>").addClass("repo span6 " + (repo.language || "").toLowerCase());
-            var $link = $("<a>").attr("href", repo.homepage || repo.html_url).appendTo($item);
+            var $link = $("<a>").attr("href", getUrl(repo)).appendTo($item);
             var $inner = $("<div>").addClass("inner well").appendTo($link);
             $inner.append($("<h2>").addClass("repo-name").text(repo.name));
             $inner.append($("<p>").addClass("repo-desc").text(repo.description));
             var $badges = $("<div>").addClass("repo-badges").appendTo($inner);
             if (repo.language) $badges.append($("<span>").addClass("repo-lang badge badge-info").text(repo.language));
-            $badges.append($("<span>").addClass("repo-watchers badge badge-info").text(getWatcherText(repo.watchers)));
+            $badges.append($("<span>").addClass("repo-watchers badge badge-info").text(getWatchers(repo)));
             $item.appendTo(element);
           });
         }
