@@ -12,68 +12,21 @@
     <!--[if lt IE 9]>
       <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="assets/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-      $(function() {
-        var userUrl = "https://api.github.com/users/marcuswhybrow?callback=?"
-        var reposUrl = "https://api.github.com/users/marcuswhybrow/repos?callback=?"
-        
-        function getUrl(repo) {
-          if (repo.homepage && repo.homepage.indexOf("http://marcuswhybrow.github.com") == 0) return repo.homepage;
-          return repo.html_url;
-        }
-        
-        function getWatchers(repo) {
-          if (repo.watchers == 1) return repo.watchers + " watcher";
-          return repo.watchers + " watchers";
-        }
-        
-        function addRepos(element, repos) {
-          $.each(repos, function(i, repo) {
-            var $item = $("<div>").addClass("repo span6 " + (repo.language || "").toLowerCase());
-            var $link = $("<a>").attr("href", getUrl(repo)).appendTo($item);
-            var $inner = $("<div>").addClass("inner well").appendTo($link);
-            $inner.append($("<h2>").addClass("repo-name").text(repo.name));
-            $inner.append($("<p>").addClass("repo-desc").text(repo.description));
-            var $badges = $("<div>").addClass("repo-badges").appendTo($inner);
-            if (repo.language) $badges.append($("<span>").addClass("repo-lang badge badge-info").text(repo.language));
-            $badges.append($("<span>").addClass("repo-watchers badge badge-info").text(getWatchers(repo)));
-            $item.appendTo(element);
-          });
-        }
-        
-        $.getJSON(userUrl, function(result) {
-          var marcus = result.data;
-          
-          $("#repos-total").text(marcus.public_repos);
-          $("#repos-num-followers").text(marcus.followers);
-          $("#repos-num-following").text(marcus.following);
-          $(".repos>p").slideDown();
-        });
-        
-        $.getJSON(reposUrl, function (result) {
-          var repos = result.data;
-          
-          $.each(repos, function(i, repo) {
-            repo.pushed_at = new Date(repo.pushed_at);
-          });
-          
-          repos.sort(function (a, b) {
-            if (a.pushed_at < b.pushed_at) return 1;
-            if (a.pushed_at > b.pushed_at) return -1;
-            return 0;
-          });
-          
-          addRepos("#repos-one", repos.slice(0, 2));
-          addRepos("#repos-two", repos.slice(2, 4));
-          $(".repos").slideDown();
-        });
-      });
+      // Google Analytics Code
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32699098-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
   </head>
-  <body>
-    
+
+  <body>  
     <div class="masthead container">
       <div>
         <p class="hello">Hello. My name is</p>
@@ -118,5 +71,145 @@
       <div id="repos-two" class="row"></div>
       
     </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.3/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      // jquery-1.7.2.min.js local fallback
+      if (typeof jQuery == 'undefined')
+        document.write('<script src="assets/js/jquery-1.7.2.min.js" type="text/javascript"><\/script>');
+
+      // bootstrap.min.js local fallback
+      if (typeof jQuery != 'undefined' && typeof jQuery.fn.modal == 'undefined')
+        document.write('<script src="assets/js/bootstrap.min.js" type="text/javascript"><\/script>');
+
+      // Fallback for browsers that don't support console
+      if (typeof console == 'undefined') console = { log: function() {}, warn: function() {}, error: function() {}, debug: function() {}, info: function() {} };
+    </script>
+    <script type="text/javascript">
+      // Object Definitions
+      var Repositories = {},
+          Github = {};
+
+      Repositories.Repository = function(repo) {
+        this.data = repo;
+        this.cleverLink =
+          this.data.homepage && this.data.homepage.indexOf("http://marcuswhybrow.github.com") == 0
+          ? this.data.homepage
+          : this.data.html_url;
+
+        this.pushedAt = new Date(this.data.pushed_at);
+      };
+      Repositories.Repository.prototype = {
+        descriptionLengthMax: 60,
+
+        toDOM: function(element, callback) {
+          var $item = $("<div>").addClass("repo span6 " + (this.data.language || "").toLowerCase()),
+              $link = $("<a>").addClass("ga-track").attr("href", this.cleverLink).appendTo($item),
+              $inner = $("<div>").addClass("inner well").appendTo($link),
+              $badges;
+
+          $inner.append($("<h2>").addClass("repo-name").text(this.data.name));
+          $inner.append($("<p>").addClass("repo-desc").text(this.getDescription()));
+          
+          $badges = $("<div>").addClass("repo-badges").appendTo($inner);
+          if (this.data.language) $badges.append($("<span>").addClass("repo-lang badge badge-info").text(this.data.language));
+          $badges.append($("<span>").addClass("repo-watchers badge badge-info").text(this.getWatchers()));
+          $item.appendTo(element);
+
+          if (callback) callback.call(this);
+        },
+
+        getWatchers: function() {
+          if (this.data.watchers == 1) return this.data.watchers + " watcher";
+          return this.data.watchers + " watchers";
+        },
+
+        getDescription: function() {
+          if (this.data.description.length > this.descriptionLengthMax)
+            return this.data.description.slice(0, this.descriptionLengthMax) + '...';
+          return this.data.description;
+        }
+      };
+
+
+
+      Github.User = function(userName, onLoadCallback) {
+        this.userName = userName;
+
+        var _this = this;
+        $.getJSON('https://api.github.com/users/' + this.userName + '?callback=?', function(result) {
+          _this.numPublicRepos = result.data.public_repos;
+          _this.followers = result.data.followers;
+          _this.following = result.data.following;
+
+          if (onLoadCallback) onLoadCallback.call(_this);
+        });
+      };
+      Github.User.prototype = {
+        toDOM: function() {
+          $("#repos-total").text(this.numPublicRepos);
+          $("#repos-num-followers").text(this.followers);
+          $("#repos-num-following").text(this.following);
+          $(".repos>p").slideDown();
+        },
+
+        getRepos: function(callback) {
+          var _this = this;
+          $.getJSON('https://api.github.com/users/' + this.userName + '/repos?callback=?', function(result) {
+            var repos = [];
+            $.each(result.data, function(i, repo) {
+              repos.push(new Repositories.Repository(repo));
+            });
+            repos.sort(function(a, b) {
+              if (a.pushedAt < b.pushedAt) return 1;
+              if (a.pushedAt > b.pushedAt) return -1;
+              return 0;
+            })
+
+            callback.call(_this, repos);
+          });
+        }
+      }
+
+
+      if (typeof jQuery != 'undefined') {
+        $(function() {
+          new Github.User('marcuswhybrow', function() {
+            // Adds user information to the page
+            this.toDOM();
+
+            // Get a list of all user repositories
+            this.getRepos(function(repos) {
+              // Adds repositories to the page
+              if (repos.length >= 2) {
+                repos[0].toDOM('#repos-one');
+                repos[1].toDOM('#repos-one');
+              }
+              if (repos.length >= 4) {
+                repos[2].toDOM('#repos-two');
+                repos[3].toDOM('#repos-two');
+              }
+
+              // Reveals the repositories section now that it has loaded.
+              $('.repos').slideDown();
+            });
+          });
+
+          // Track repository clicks
+          $('.repo a').live('click mousedown', function (event) {
+            // Both left clicking and middle clicking mean the link was followed, but not right clicking (even.which == 3)
+            if (event.which == 1 || event.which == 2) {
+              var $this = $(this);
+              _gaq.push(['_trackEvent', 'Repository Link', $this.find('.repo-name').text(), $this.attr('href')]);
+            }
+          });
+        });
+      } else {
+        console.warn('jQuery is required and was not loaded. Some page elements may not appear. Sorry about that.');
+      }
+    </script>
   </body>
 </html>
