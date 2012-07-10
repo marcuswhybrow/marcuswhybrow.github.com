@@ -129,6 +129,7 @@
         },
 
         getDescription: function() {
+          if (this.data.description == null) return "-- No description --";
           if (this.data.description.length > this.descriptionLengthMax)
             return this.data.description.slice(0, this.descriptionLengthMax) + '...';
           return this.data.description;
@@ -159,16 +160,11 @@
 
         getRepos: function(callback) {
           var _this = this;
-          $.getJSON('https://api.github.com/users/' + this.userName + '/repos?callback=?', function(result) {
+          $.getJSON('https://api.github.com/users/' + this.userName + '/repos?sort=pushed&callback=?', function(result) {
             var repos = [];
             $.each(result.data, function(i, repo) {
               repos.push(new Repositories.Repository(repo));
             });
-            repos.sort(function(a, b) {
-              if (a.pushedAt < b.pushedAt) return 1;
-              if (a.pushedAt > b.pushedAt) return -1;
-              return 0;
-            })
 
             callback.call(_this, repos);
           });
