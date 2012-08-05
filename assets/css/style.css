@@ -106,3 +106,50 @@ body {
 .repo .repo-badges .badge {
   margin-right: 10px;
 }
+
+
+.page-word .section {
+  font-size: 2em;
+}
+.page-word h1.title {
+  text-align: center;
+  font-size: 50px;
+  font-family: Georgia,serif;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.page-word .masthead h1 {
+  font-size: 42px;
+  border-bottom: 1px #eee solid;
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+.page-word .masthead h1 a {
+  color: #666;
+  opacity: 0.2;
+  -webkit-transition: opacity 0.1s;
+     -moz-transition: opacity 0.1s;
+      -ms-transition: opacity 0.1s;
+       -o-transition: opacity 0.1s;
+          transition: opacity 0.1s;
+}
+.page-word .masthead h1 a:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+.page-word .masthead {
+  margin-bottom: 20px;
+}
+body.page-word {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+body.page-word .container {
+  width: 550px;
+}
+body.page-word p {
+  margin-bottom: 1em;
+}
