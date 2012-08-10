@@ -9,6 +9,9 @@ body_class: page-word page-word-list style-thin
 
     <div class="container">
       <h1 class="title">Word List</h1>
+      <p>You have found my list of appealing words. I get excited when a word evinces itself from the endless mist of language. My inability to capture flowing streams of congnition to a page diminishes, but I fear and suspect and accept that it is still awkward; an embryonic skill.</p>
+
+      <p>This section, then, is an effort to push back the borders of ignorance, in my own understanding, by annexing one word at a time, in a way that I may actually remember:</p>
       <ul>
       	{% for post in paginator.posts %}
       		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
