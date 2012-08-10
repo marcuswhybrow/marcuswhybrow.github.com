@@ -8,5 +8,9 @@ body_class: page-word
 
     <div class="container">
       <h1 class="title">{{ page.title | captilize }}</h1>
+      <div class="links">
+      	<a class="etymology-link" href="http://www.etymonline.com/index.php?term={{ page.title }}&amp;allowed_in_frame=0">etymology</a>
+      	<a class="definition-link" href="https://www.google.co.uk/search?q={{ page.title }}&amp;tbs=dfn:1">definition</a>
+      </div>
 {{ content }}
     </div>
