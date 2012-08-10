@@ -108,23 +108,23 @@ body {
 }
 
 
-.page-word .section {
+.style-thin .section {
   font-size: 2em;
 }
-.page-word h1.title {
+.style-thin h1.title {
   text-align: center;
   font-size: 50px;
   font-family: Georgia,serif;
   font-style: italic;
   font-weight: 500;
 }
-.page-word .masthead h1 {
+.style-thin .masthead h1 {
   font-size: 42px;
   border-bottom: 1px #eee solid;
   padding-bottom: 20px;
   font-weight: 300;
 }
-.page-word .masthead h1 a {
+.style-thin .masthead h1 a {
   color: #666;
   opacity: 0.2;
   -webkit-transition: opacity 0.1s;
@@ -133,30 +133,34 @@ body {
        -o-transition: opacity 0.1s;
           transition: opacity 0.1s;
 }
-.page-word .masthead h1 a:hover {
+.style-thin .masthead h1 a:hover {
   opacity: 0.9;
   text-decoration: none;
 }
-.page-word .masthead {
+.style-thin .masthead {
   margin-bottom: 20px;
 }
-body.page-word {
+body.style-thin {
   padding-top: 20px;
   font-size: 18px;
   line-height: 1.5em;
   font-weight: 300;
 }
-body.page-word .container {
+body.style-thin .container {
   width: 550px;
 }
-body.page-word p {
+body.style-thin p {
   margin-bottom: 1em;
 }
-.page-word a.etymology-link,
-.page-word a.definition-link {
+.style-thin a.etymology-link,
+.style-thin a.definition-link {
   font-size: 13px;
 }
-.page-word .links {
+.style-thin .links {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.style-thin.page-word-list h1.title {
   margin-bottom: 20px;
 }
