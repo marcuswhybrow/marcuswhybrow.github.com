@@ -71,7 +71,7 @@ title: Marcus Whybrow
       Repositories.Repository = function(repo) {
         this.data = repo;
         this.cleverLink =
-          this.data.homepage && (this.data.homepage.indexOf("http://marcuswhybrow.github.com") == 0 || this.data.homepage.indexOf("http://marcuswhybrow.net") == 0)
+          this.data.homepage && (this.data.homepage != "http://marcuswhybrow.net/")
           ? this.data.homepage
           : this.data.html_url;
 
