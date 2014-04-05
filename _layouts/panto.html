@@ -7,7 +7,9 @@
     <meta name="author" content="Marcus Whybrow">
     
     <link rel="author" href="https://plus.google.com/103832793361409130288/posts">
-    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ site.baseurl }}assets/css/bootstrap.min.css"> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
     
     <!--[if lt IE 9]>
@@ -25,10 +27,26 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+
+    <style type="text/css">
+      h3 { margin-top: 50px; }
+    </style>
   </head>
 
-  <body class="{{ page.body_class }}">  
+  <body class="style-thin">  
+    <div class="masthead container">
+      <h1 style="font-size:18px; padding-bottom: 5px; margin-bottom: 20px"><a href="{{ site.baseurl }}">Marcus Whybrow</a></h1>
+    </div>
+
+    <div class="container">
+      <h1 class="title" style="margin-top: 0; margin-bottom: 40px"><a style="color:inherit" href="{{ sitre.root }}">{{ page.panto-name | captilize }}</a></h1>
+
 {{ content }}
+
+    </div>
   </body>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 </html>

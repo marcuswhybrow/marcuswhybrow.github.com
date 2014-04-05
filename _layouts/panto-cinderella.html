@@ -1,0 +1,57 @@
+---
+layout: panto
+root: /panto/2015-cinderella/
+panto-name: Cinderella
+---
+
+<nav style="margin-top: 10px" class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="nav navbar-nav">
+        <li {% if page.active-home %}class="active"{% endif %}><a class="navbar-brand" href="{{ page.root }}">Home</a></li>
+      </ul>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown {% if page.active-characters %}active{% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Characters <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ page.root }}charming/">Prince Charming</a></li>
+            <li><a href="{{ page.root }}cinderella/">Cinderella</a></li>
+            <li><a href="{{ page.root }}dandini/">Dandini</a></li>
+            <li><a href="{{ page.root }}buttons/">Buttons</a></li>
+            <li><a href="{{ page.root }}baroness/">The Baroness</a></li>
+            <li><a href="{{ page.root }}camilla/">Camilla</a></li>
+            <li><a href="{{ page.root }}drusilla/">Drusilla</a></li>
+            <li><a href="{{ page.root }}fairy/">Fairy Godmother</a></li>
+            <li><a href="{{ page.root }}king/">The King</a></li>
+            <li><a href="{{ page.root }}queen/">The Queen</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ page.root }}organiser/">The Organiser</a></li>
+            <li><a href="{{ page.root }}mail/">Royal Mail</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ page.root }}general/">General Stuff</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#">Link</a></li> -->
+        <a type="button" class="btn btn-default navbar-btn" href=""><span class="glyphicon glyphicon-cloud-download"></span> Script.pdf</a>
+        <a type="button" class="btn btn-default navbar-btn" href=""><span class="glyphicon glyphicon-cloud-download"></span> Songs.zip</a>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+{{ content }}
+
