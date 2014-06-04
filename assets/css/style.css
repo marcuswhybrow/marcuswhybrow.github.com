@@ -164,3 +164,92 @@ body.style-thin p {
 .style-thin.page-word-list h1.title {
   margin-bottom: 20px;
 }
+
+body.panto .container {
+  width: 600px;
+}
+
+
+#songs {
+  font-size: 14px;
+}
+
+#intro {
+  margin-top: -15px;
+  text-align: center;
+  /*width: 60%;*/
+  /*margin: 0 auto;*/
+  font-size: 80%;
+  font-style: italic;
+}
+
+.byline {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 300;
+}
+.byline span {
+  /*color: black;*/
+}
+
+ul.song-status {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+.song-status li {
+  float: left;
+  padding: 0px 10px;
+  margin-right: 5px;
+}
+.song-status td,
+.song-status th {
+  padding: 0 10px;
+}
+.song-status li.red,
+.song-status td.red {
+  background-color: #e00;
+  color: #500;
+  border-color: #a00;
+}
+.song-status li.amber,
+.song-status td.amber {
+  background-color: #fa0;
+  color: #830;
+  border-color: #a50;
+}
+.song-status li.green,
+.song-status td.green {
+  background-color: #0d0;
+  color: #060;
+  border-color: #080;
+}
+
+.spotify {
+  margin-top: 5px;
+}
+
+h3.lowkey {
+  text-align: center;
+  border-top: 1px solid #eee;
+  font-size: 18px;
+  color: #aaa;
+  text-transform: uppercase;
+  padding-top: 10px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resources {
+  width: 100%;
+}
+.resources th {
+  border-bottom: 1px solid #eee;
+}
+.resources .disabled {
+  opacity: 0.5;
+}

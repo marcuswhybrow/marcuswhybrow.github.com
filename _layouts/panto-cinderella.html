@@ -4,7 +4,7 @@ root: /panto/2015-cinderella/
 panto-name: Cinderella
 ---
 
-<nav style="margin-top: 10px" class="navbar navbar-default" role="navigation">
+<nav style="margin-top: 10px; margin-bottom: 40px;" class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -23,24 +23,46 @@ panto-name: Cinderella
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown {% if page.active-characters %}active{% endif %}">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Characters <b class="caret"></b></a>
+          <a href="#characters" class="dropdown-toggle" data-toggle="dropdown">Characters <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ page.root }}charming/">Prince Charming</a></li>
-            <li><a href="{{ page.root }}cinderella/">Cinderella</a></li>
-            <li><a href="{{ page.root }}dandini/">Dandini</a></li>
-            <li><a href="{{ page.root }}buttons/">Buttons</a></li>
-            <li><a href="{{ page.root }}baroness/">The Baroness</a></li>
-            <li><a href="{{ page.root }}camilla/">Camilla</a></li>
-            <li><a href="{{ page.root }}drusilla/">Drusilla</a></li>
-            <li><a href="{{ page.root }}fairy/">Fairy Godmother</a></li>
-            <li><a href="{{ page.root }}king/">The King</a></li>
-            <li><a href="{{ page.root }}queen/">The Queen</a></li>
+            <li><a href="{{ page.base }}characters/charming/">Prince Charming</a></li>
+            <li><a href="{{ page.root }}characters/cinderella/">Cinderella</a></li>
+            <li><a href="{{ page.root }}characters/dandini/">Dandini</a></li>
+            <li><a href="{{ page.root }}characters/buttons/">Buttons</a></li>
+            <li><a href="{{ page.root }}characters/baroness/">The Baroness</a></li>
+            <li><a href="{{ page.root }}characters/camilla/">Camilla</a></li>
+            <li><a href="{{ page.root }}characters/drusilla/">Drusilla</a></li>
+            <li><a href="{{ page.root }}characters/fairy/">Fairy Godmother</a></li>
+            <li><a href="{{ page.root }}characters/king/">The King</a></li>
+            <li><a href="{{ page.root }}characters/queen/">The Queen</a></li>
             <li class="divider"></li>
-            <li><a href="{{ page.root }}organiser/">The Organiser</a></li>
-            <li><a href="{{ page.root }}mail/">Royal Mail</a></li>
-            <li><a href="{{ page.root }}advisers/">Advisers</a></li>
+            <li><a href="{{ page.root }}characters/organiser/">The Organiser</a></li>
+            <li><a href="{{ page.root }}characters/mail/">Royal Mail</a></li>
+            <li><a href="{{ page.root }}characters/advisers/">Advisers</a></li>
             <li class="divider"></li>
-            <li><a href="{{ page.root }}general/">General Stuff</a></li>
+            <li><a href="{{ page.root }}characters/general/">General Stuff</a></li>
+          </ul>
+        </li>
+        <li class="dropdown {% if page.active-songs %}active{% endif %}">
+          <a href="#songs" class="dropdown-toggle" data-toggle="dropdown">Songs <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ page.root }}songs/opening/">OPENING SONG</a></li>
+            <li><a href="{{ page.root }}songs/to-love-somebody/">To Love Somebody</a></li>
+            <li><a href="{{ page.root }}songs/sisters/">Sisters</a></li>
+            <li><a href="{{ page.root }}songs/once-upon-a-dream/">Once Upon A Dream</a></li>
+            <li><a href="{{ page.root }}songs/somebody-to-love/">Somebody To Love</a></li>
+            <li><a href="{{ page.root }}songs/please/">Please</a></li>
+            <li><a href="{{ page.root }}songs/welcome-home/">Welcome Home</a></li>
+            <li><a href="{{ page.root }}songs/when-you-believe/">When You Believe</a></li>
+            <li><a href="{{ page.root }}songs/dance/">DANCE SONG</a></li>
+            <li><a href="{{ page.root }}songs/the-court-of-king-caractacus/">The Court of King Caractacus</a></li>
+            <li><a href="{{ page.root }}songs/i-want-to-know-what-love-is/">I Want To Know What Love Is (Medley)</a></li>
+            <li><a href="{{ page.root }}songs/madness/">Madness</a></li>
+            <li><a href="{{ page.root }}songs/once-upon-a-dream-reprise/">Once Upon A Dream (Reprise)</a></li>
+            <li><a href="{{ page.root }}songs/burnin-love/">Burnin' Love</a></li>
+            <li><a href="{{ page.root }}songs/livin-on-a-prayer/">Livin' On A Prayer</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ page.root }}songs/complexity/">Complexity Overview</a></li>
           </ul>
         </li>
         
