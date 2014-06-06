@@ -1,3 +1,4 @@
 permalink: /:categories/:title
 baseurl: /
 paginate: 10
+markdown: kramdown
