@@ -46,6 +46,8 @@ panto-name: Cinderella
         <li class="dropdown {% if page.active-songs %}active{% endif %}">
           <a href="#songs" class="dropdown-toggle" data-toggle="dropdown">Songs <b class="caret"></b></a>
           <ul class="dropdown-menu">
+            <li><a href="{{ page.root }}songs/">Overview</a></li>
+            <li class="divider"></li>
             <li><a href="{{ page.root }}songs/on-a-wonderful-day-like-today/">On A Wonderful Day Like Today</a></li>
             <li><a href="{{ page.root }}songs/to-love-somebody/">To Love Somebody</a></li>
             <li><a href="{{ page.root }}songs/sisters/">Sisters</a></li>
@@ -66,7 +68,7 @@ panto-name: Cinderella
             <li><a href="{{ page.root }}band/daniel/">Band / Daniel</a></li>
           </ul>
         </li>
-        
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!-- <li><a href="#">Link</a></li> -->
@@ -92,4 +94,3 @@ panto-name: Cinderella
   ga('send', 'pageview');
 
 </script>
-
