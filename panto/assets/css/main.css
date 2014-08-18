@@ -435,6 +435,9 @@ table th {
     display: block;
     width: 100%;
 }
+#site #canvas #header-wrapper #nav-global li ul.characters {
+    width: 100%;
+}
 #site #canvas #header-wrapper #nav-global li ul.characters li {
     text-align: right;
 }
