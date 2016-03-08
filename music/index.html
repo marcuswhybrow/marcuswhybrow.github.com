@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Marcus Codes</title>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <style media="screen">
+      body {
+        margin: 0;
+        /*height: 100%;*/
+      }
+      #info {
+        position: absolute;
+        top: 30%;
+        text-align: center;
+        width: 100%;
+      }
+      #name {
+        font-family: 'Poiret One', cursive;
+        font-weight: normal;
+        font-size: 80px;
+        color: #588C7E;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+      #desc {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        color: #222;
+        margin-bottom: 3px;
+      }
+      #contact {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        color: #444;
+      }
+      #contact a {
+        text-decoration: none;
+        color: #444;
+      }
+      #contact a:hover {
+        color: #D96459;
+      }
+      .t-underline {
+        position: relative;
+      }
+      .t-underline:after {
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        width: 0;
+        height: 1px;
+        background-color: #D96459;
+        content: "";
+        transition: width 0.2s, left 0.2s;
+      }
+      .t-underline:hover {
+        color: #D96459;
+      }
+      .t-underline:hover:after {
+        width: 100%;
+        left: 0%;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="info">
+      <h1 id="name">Marcus Whybrow</h1>
+      <p id="desc">singer, player and performer around Nottingham</p>
+      <p id="contact">
+        <a class="t-underline" href='mailto:&#109;&#117;&#115;&#105;&#99;&#64;&#109;&#97;&#114;&#99;&#117;&#115;&#119;&#104;&#121;&#98;&#114;&#111;&#119;&#46;&#99;&#111;&#109;'>&#109;&#117;&#115;&#105;&#99;&#64;&#109;&#97;&#114;&#99;&#117;&#115;&#119;&#104;&#121;&#98;&#114;&#111;&#119;&#46;&#99;&#111;&#109;</a>
+      </p>
+    </div>
+  </body>
+</html>
