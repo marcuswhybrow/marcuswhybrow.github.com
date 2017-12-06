@@ -1,184 +1,46 @@
----
-layout: default
-title: Marcus Whybrow
----
-    <div class="masthead container">
-      <div>
-        <p class="hello">Hello. My name is</p>
-        <h1>Marcus Whybrow</h1>
-        <p>I become bored easily, but spend lots of time on GitHub.</p>
-      
-        <p class="buttons">
-          <a href="https://github.com/marcuswhybrow/" class="btn btn-primary btn-large">View that code on GitHub</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Marcus Whybrow</title>
+    <link rel="stylesheet" href="assets/css/global.css" charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://s3.marcus.codes/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="http://s3.marcus.codes/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://s3.marcus.codes/img/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="http://s3.marcus.codes/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="http://s3.marcus.codes/img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="http://s3.marcus.codes/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="http://s3.marcus.codes/img/favicons/manifest.json">
+    <link rel="mask-icon" href="http://s3.marcus.codes/img/favicons/safari-pinned-tab.svg" color="#62bda5">
+    <link rel="shortcut icon" href="http://s3.marcus.codes/img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#62bda5">
+    <meta name="msapplication-TileImage" content="http://s3.marcus.codes/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="http://s3.marcus.codes/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="cf">
+    <div class="world">
+      <div class="bg"></div>
+      <div class="frame">
+        <a href="//marcus.actor"><img id="emblem" src="http://s3.marcus.codes/img/emblem.png" alt="Emblem" /></a>
+        <h1 id="name">Marcus Whybrow</h1>
+        <p id="desc">musician, coder, actor, BJJ White Belt ;)</p>
+        <p id="contact">
+          <a class="t-underline" href='m&#97;&#105;&#108;to&#58;&#109;&#37;6&#49;rcu&#115;&#64;m%6&#49;&#114;%63u&#115;%7&#55;hy%62%72%6Fw&#37;2Ecom'>mar&#99;us&#64;m&#97;&#114;cuswhybr&#111;&#119;&#46;com</a>
         </p>
       </div>
     </div>
-    
-    <div class="also">
-      <div class="container">
-        <div class="row">
-        
-          <div class="span4">
-            <h2>I also play the guitar...</h2>
-            <p>I've been strumming away since I was nine, electric or acoustic. Muse, Queen, Rage Against the Machine, AC/DC... as long as it feels good to play or has a poignant message I wanna play it!</p>
-          </div>
-        
-          <div class="span4">
-            <h2>...and the piano...</h2>
-            <p>OK. I'm not as good on this thing, but I can play some Chopin, Beethoven, and a little Rachmaninoff. And yes some Muse, since they kindled my interest in the instrument.</p>
-          </div>
-        
-          <div class="span4">
-            <h2>...and Minecraft</h2>
-            <p>And steam games of course. I play games for the community aspect, I run a TeamSpeak server for my friends, and also host a private Minecraft server.</p>
-          </div>
-        
-        </div>
-      </div>
-    </div>
-      
-    <div class="repos container">
-      
-      <h1>My recent GitHub repositories</h1>
-      <p>I have <a href="https://github.com/marcuswhybrow/repositories"><span id="repos-total">..</span> repositories</a>, follow <span id="repos-num-following">..</span> people, and <span id="repos-num-followers">..</span> people follow me.</p>
-      
-      <div id="repos-one" class="row"></div>
-      <div id="repos-two" class="row"></div>
-      
-    </div>
-
-    <!-- Scripts -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.3/bootstrap.min.js"></script>
-    <script type="text/javascript">
-
-      // jquery-1.7.2.min.js local fallback
-      if (typeof jQuery == 'undefined')
-        document.write('<script src="assets/js/jquery-1.7.2.min.js" type="text/javascript"><\/script>');
-
-      // bootstrap.min.js local fallback
-      if (typeof jQuery != 'undefined' && typeof jQuery.fn.modal == 'undefined')
-        document.write('<script src="assets/js/bootstrap.min.js" type="text/javascript"><\/script>');
-
-      // Fallback for browsers that don't support console
-      if (typeof console == 'undefined') console = { log: function() {}, warn: function() {}, error: function() {}, debug: function() {}, info: function() {} };
-    </script>
-    <script type="text/javascript">
-      // Object Definitions
-      var Repositories = {},
-          Github = {};
-
-      Repositories.Repository = function(repo) {
-        this.data = repo;
-        this.cleverLink =
-          this.data.homepage && (this.data.homepage != "http://marcuswhybrow.net/")
-          ? this.data.homepage
-          : this.data.html_url;
-
-        this.pushedAt = new Date(this.data.pushed_at);
-      };
-      Repositories.Repository.prototype = {
-        descriptionLengthMax: 60,
-
-        toDOM: function(element, callback) {
-          var $item = $("<div>").addClass("repo span6 " + (this.data.language || "").toLowerCase()),
-              $link = $("<a>").addClass("ga-track").attr("href", this.cleverLink).appendTo($item),
-              $inner = $("<div>").addClass("inner well").appendTo($link),
-              $badges;
-
-          $inner.append($("<h2>").addClass("repo-name").text(this.data.name));
-          $inner.append($("<p>").addClass("repo-desc").text(this.getDescription()));
-          
-          $badges = $("<div>").addClass("repo-badges").appendTo($inner);
-          if (this.data.language) $badges.append($("<span>").addClass("repo-lang badge badge-info").text(this.data.language));
-          $badges.append($("<span>").addClass("repo-watchers badge badge-info").text(this.getWatchers()));
-          $item.appendTo(element);
-
-          if (callback) callback.call(this);
-        },
-
-        getWatchers: function() {
-          if (this.data.watchers == 1) return this.data.watchers + " watcher";
-          return this.data.watchers + " watchers";
-        },
-
-        getDescription: function() {
-          if (this.data.description == null) return "-- No description --";
-          if (this.data.description.length > this.descriptionLengthMax)
-            return this.data.description.slice(0, this.descriptionLengthMax) + '...';
-          return this.data.description;
-        }
-      };
-
-
-
-      Github.User = function(userName, onLoadCallback) {
-        this.userName = userName;
-
-        var _this = this;
-        $.getJSON('https://api.github.com/users/' + this.userName + '?callback=?', function(result) {
-          _this.numPublicRepos = result.data.public_repos;
-          _this.followers = result.data.followers;
-          _this.following = result.data.following;
-
-          if (onLoadCallback) onLoadCallback.call(_this);
-        });
-      };
-      Github.User.prototype = {
-        toDOM: function() {
-          $("#repos-total").text(this.numPublicRepos);
-          $("#repos-num-followers").text(this.followers);
-          $("#repos-num-following").text(this.following);
-          $(".repos>p").slideDown();
-        },
-
-        getRepos: function(callback) {
-          var _this = this;
-          $.getJSON('https://api.github.com/users/' + this.userName + '/repos?sort=pushed&callback=?', function(result) {
-            var repos = [];
-            $.each(result.data, function(i, repo) {
-              repos.push(new Repositories.Repository(repo));
-            });
-
-            callback.call(_this, repos);
-          });
-        }
-      }
-
-
-      if (typeof jQuery != 'undefined') {
-        $(function() {
-          new Github.User('marcuswhybrow', function() {
-            // Adds user information to the page
-            this.toDOM();
-
-            // Get a list of all user repositories
-            this.getRepos(function(repos) {
-              // Adds repositories to the page
-              if (repos.length >= 2) {
-                repos[0].toDOM('#repos-one');
-                repos[1].toDOM('#repos-one');
-              }
-              if (repos.length >= 4) {
-                repos[2].toDOM('#repos-two');
-                repos[3].toDOM('#repos-two');
-              }
-
-              // Reveals the repositories section now that it has loaded.
-              $('.repos').slideDown();
-            });
-          });
-
-          // Track repository clicks
-          $('.repo a').live('click mousedown', function (event) {
-            // Both left clicking and middle clicking mean the link was followed, but not right clicking (even.which == 3)
-            if (event.which == 1 || event.which == 2) {
-              var $this = $(this);
-              _gaq.push(['_trackEvent', 'Repository Link', $this.find('.repo-name').text(), $this.attr('href')]);
-            }
-          });
-        });
-      } else {
-        console.warn('jQuery is required and was not loaded. Some page elements may not appear. Sorry about that.');
-      }
-    </script>
+  </body>
+</html>

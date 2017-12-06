@@ -1,0 +1,129 @@
+body, html {
+  padding: 0; margin: 0;
+}
+
+.world {
+  width: 100%;
+  height: 100%;
+  background-color: #8abfdb;
+  position: absolute;
+  overflow: hidden;
+
+  /* Keeps all text accessible */
+  min-width: 1300px;
+  min-height: 800px;
+}
+
+.world .bg {
+  background-image: url('//s3.marcus.codes/img/marcus-bg-mural.jpg');
+  width: 2741px;
+  height: 1739px;
+
+  position: absolute;;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-55%);
+      -ms-transform: translateX(-50%) translateY(-55%);
+          transform: translateX(-50%) translateY(-55%);
+  z-index: 100;
+}
+
+.world .frame {
+  width: 350px;
+  height: 400px;
+  /*background-color: grey;*/
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-160%) translateY(-90%);
+  -ms-transform: translateX(-160%) translateY(-90%);
+      transform: translateX(-160%) translateY(-90%);
+  z-index: 200;
+}
+
+#emblem {
+  width: 348px;
+  height: 365px;
+}
+
+#name {
+  font-family: 'Poiret One', cursive;
+  font-weight: normal;
+  font-size: 50px;
+  color: #1F0B16;
+  margin: 0;
+  margin-bottom: 10px;
+
+  width: 500px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+
+  text-transform: lowercase;
+}
+
+#desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  color: #555;
+  margin-bottom: 3px;
+
+  width: 500px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+       -mstransform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#contact {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: #555;
+
+  width: 500px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#contact a {
+  text-decoration: none;
+  color: #555;
+}
+#contact a:hover {
+  color: #AF2F2E;
+}
+
+.t-underline {
+  position: relative;
+}
+.t-underline:after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background-color: #AF2F2E;
+  content: "";
+  transition: width 0.2s, left 0.2s;
+}
+.t-underline:hover {
+  color: #D96459;
+}
+.t-underline:hover:after {
+  width: 100%;
+  left: 0%;
+}
