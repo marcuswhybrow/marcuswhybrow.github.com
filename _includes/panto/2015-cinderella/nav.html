@@ -1,0 +1,56 @@
+<nav id="nav-global" role="navigation">
+    <a href="#nav" title="Show navigation">Show navigation</a>
+    <a href="#" title="Hide navigation">Hide navigation</a>
+
+    <ul>
+        <li class="{% if page.active-characters %}active{% endif %}" style="width: 120px; text-align: right">
+            <a href="{{ page.root }}story/" aria-haspopup="true">Story</a>
+            <ul class="characters">
+                <li><a href="{{ page.root }}characters/charming/">Charming</a></li>
+                <li><a href="{{ page.root }}characters/cinderella/">Cinderella</a></li>
+                <li><a href="{{ page.root }}characters/dandini/">Dandini</a></li>
+                <li><a href="{{ page.root }}characters/buttons/">Buttons</a></li>
+                <li><a href="{{ page.root }}characters/baroness/">Baroness</a></li>
+                <li><a href="{{ page.root }}characters/camilla/">Camilla</a></li>
+                <li><a href="{{ page.root }}characters/drusilla/">Drusilla</a></li>
+                <li><a href="{{ page.root }}characters/fairy/">Fairy</a></li>
+                <li><a href="{{ page.root }}characters/king/">King</a></li>
+                <li><a href="{{ page.root }}characters/queen/">Queen</a></li>
+                <li class="divider"></li>
+                <li><a href="{{ page.root }}characters/organiser/">Organiser</a></li>
+                <li><a href="{{ page.root }}characters/mail/">Royal Mail</a></li>
+                <li><a href="{{ page.root }}characters/advisers/">Advisers</a></li>
+                <li class="divider"></li>
+                <li><a href="{{ page.root }}characters/general/">General</a></li>
+            </ul>
+        </li>
+        <li class="{% if page.active-songs %}active{% endif %}">
+            <a href="{{ page.root }}songs/" aria-haspopup="true">Music</a>
+            <ul class="music" style="width: 400px">
+                <li><a href="{{ page.root }}songs/on-a-wonderful-day-like-today/">On A Wonderful Day Like Today</a></li>
+                <li><a href="{{ page.root }}songs/to-love-somebody/">To Love Somebody</a></li>
+                <li><a href="{{ page.root }}songs/sisters/">Sisters</a></li>
+                <li><a href="{{ page.root }}songs/once-upon-a-dream/">Once Upon A Dream</a></li>
+                <li><a href="{{ page.root }}songs/somebody-to-love/">Somebody To Love</a></li>
+                <li><a href="{{ page.root }}songs/please/">Please</a></li>
+                <li><a href="{{ page.root }}songs/welcome-home/">Welcome Home</a></li>
+                <li><a href="{{ page.root }}songs/when-you-believe/">When You Believe</a></li>
+                <li><a href="{{ page.root }}songs/do-you-wanna-dance/">Do You Wanna Dance</a></li>
+                <li><a href="{{ page.root }}songs/i-want-to-know-what-love-is/">I Want To Know What Love Is (Medley)</a></li>
+                <li><a href="{{ page.root }}songs/madness/">Madness</a></li>
+                <li><a href="{{ page.root }}songs/once-upon-a-dream-reprise/">Once Upon A Dream (Reprise)</a></li>
+                <li><a href="{{ page.root }}songs/burnin-love/">Burnin' Love</a></li>
+                <li><a href="{{ page.root }}songs/livin-on-a-prayer/">Livin' On A Prayer</a></li>
+                <li class="divider"></li>
+                <li><a href="{{ page.root }}songs/complexity/">Band / Complexity Overview</a></li>
+                <li><a href="{{ page.root }}band/daniel/">Band / Daniel</a></li>
+            </ul>
+        </li>
+        <!--
+        <li>
+            <a type="button" class="btn btn-default navbar-btn" target="_blank" href="mailto:panto@whybrow.org.uk"><span class="glyphicon glyphicon-envelope"></span> Ask Marcus</a>
+        </li>
+        <li><a type="button" class="btn btn-default navbar-btn" target="_blank" href="http://open.spotify.com/user/marcuswhybrow/playlist/0t0HF3owR9ZvRjE7V4bWIf"><span class="glyphicon glyphicon-music"></span> Playlist</a></li>
+        -->
+    </ul>
+</nav>
