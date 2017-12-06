@@ -82,6 +82,45 @@ body, html {
        -mstransform: translateX(-50%);
           transform: translateX(-50%);
 }
+#desc #bjj {
+  font-family: 'Merienda One', cursive;
+  font-size: 17px;
+  color: #606060;
+
+}
+#desc #bjj #belt {
+  position: relative;
+  top: 1px;
+  margin-left: 3px;
+  display: inline-block;
+  background-image: url(http://s3.marcuswhybrow.com/img/bjj-belts.png);
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 16px;
+  opacity: 0.9;
+}
+#belt.white { background-position: 0 0 }
+#belt.white-1 { background-position: 0 -16px }
+#belt.white-2 { background-position: 0 -32px }
+#belt.white-3 { background-position: 0 -48px }
+#belt.white-4 { background-position: 0 -64px }
+#belt.blue { background-position: 0 -80px }
+#belt.blue-1 { background-position: 0 -96px }
+#belt.blue-2 { background-position: 0 -112px }
+#belt.blue-3 { background-position: 0 -128px }
+#belt.blue-4 { background-position: 0 -144px }
+#belt.purple { background-position: 0 -160px }
+#belt.purple-1 { background-position: 0 -176px }
+#belt.purple-2 { background-position: 0 -192px }
+#belt.purple-3 { background-position: 0 -208px }
+#belt.purple-4 { background-position: 0 -224px }
+#belt.brown { background-position: 0 -240px }
+#belt.brown-1 { background-position: 0 -256px }
+#belt.brown-2 { background-position: 0 -272px }
+#belt.brown-3 { background-position: 0 -288px }
+#belt.brown-4 { background-position: 0 -304px }
+#belt.black { background-position: 0 -320px }
+
 
 #contact {
   font-family: 'Open Sans', sans-serif;
